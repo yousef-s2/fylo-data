@@ -56,13 +56,14 @@
   body{
     font-family: 'Raleway', sans-serif;
     background-color:hsl(229, 57%, 11%) ;
-  }
-  .container{
     display: grid;
     place-items: center;
-    min-width: 100%;
-    min-height: 90%;
+    min-height: 100vh;
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+ 
 
 .wrapper{
     display: grid;
@@ -172,12 +173,16 @@ color: white;
 
 
 @media (min-width:768px){
+  body{
+    background-image: url(images/bg-desktop.png);
+    background-position-y: 50vh;
+  }
   .wrapper{
    grid-template-columns: 1fr 2fr;
-  
 }
 .usage{
-  min-width: 450px;
+  width: auto;
+  min-width: 512px;
 }
 .size-left{
   border-bottom-right-radius: -60%;
